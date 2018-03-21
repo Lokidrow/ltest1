@@ -5,7 +5,7 @@
 Сначала, склонируйте репозиторий
 
 ```bash
-$ git clone git@bitbucket.org:siftly/siftly.git
+$ git clone https://github.com/Lokidrow/ltest1
 ```
 
 Перейдите в каталог проекта, установите зависимости с помощью `composer install` и установите конфигурационный файл `.env`
