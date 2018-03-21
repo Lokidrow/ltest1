@@ -4,6 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Валюты
+ *
+ * Class Currencies
+ */
 class Currencies extends Model
 {
 
@@ -11,6 +16,10 @@ class Currencies extends Model
 
     protected $fillable = ['name', 'volume', 'amount'];
 
+    /**
+     * Обновить все валюты
+     * @throws \Exception
+     */
     public static function updateAll()
     {
         $arr = self::getData('http://phisix-api3.appspot.com/stocks.json');
@@ -22,6 +31,7 @@ class Currencies extends Model
     }
 
     /**
+     * Получить валюты с сервера
      * @param string $url
      * @return array
      * @throws \Exception
@@ -39,6 +49,7 @@ class Currencies extends Model
     }
 
     /**
+     * Сохранить одну валюту в бд
      * @param array $row
      */
     private static function storeRow(array $row)

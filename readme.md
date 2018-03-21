@@ -11,7 +11,7 @@ $ git clone git@bitbucket.org:siftly/siftly.git
 Перейдите в каталог проекта, установите зависимости с помощью `composer install` и установите конфигурационный файл `.env`
 
 ```bash
-$ cd /home/mnt/main3/apache/test1
+$ cd {ПУТЬ К ПРОЕКТУ}
 $ composer install
 $ cp .env.example .env
 ```
@@ -35,3 +35,13 @@ $ yarn
 ```bash
 $ npm run production
 ```
+
+Установите cron для выполнения запланированных задач в проекте
+
+```bash
+$ crontab -e
+```
+
+* * * * * php {ПУТЬ К ПРОЕКТУ}/artisan schedule:run >> /dev/null 2>&1
+
+{ПУТЬ К ПРОЕКТУ} замените на реальный путь к проекту

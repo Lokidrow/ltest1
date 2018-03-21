@@ -8,21 +8,21 @@ use Illuminate\Console\Command;
 class updateCurrencies extends Command
 {
     /**
-     * The name and signature of the console command.
+     * сигнатура консольной команды
      *
      * @var string
      */
     protected $signature = 'currencies:update';
 
     /**
-     * The console command description.
+     * Описание консольной команды
      *
      * @var string
      */
     protected $description = 'Обновление курсов валют';
 
     /**
-     * Create a new command instance.
+     * Создание нового экземпляра объектра консольной команды
      *
      * @return void
      */
@@ -32,7 +32,7 @@ class updateCurrencies extends Command
     }
 
     /**
-     * Execute the console command.
+     * Выполнение консольной команды
      *
      * @return mixed
      */

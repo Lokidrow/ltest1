@@ -33,7 +33,7 @@
             }
         },
         methods: {
-            loadRows() {
+            loadRows() { // Получение таблицы валют через ajax запрос
                 let url = this.dataAjaxUrl;
                 this.rows = [];
 
@@ -50,11 +50,11 @@
         },
         mounted() {
             const self = this;
-            this.loadRows();
-            setInterval(function() {
+            this.loadRows(); // Загрузка таблицы валют
+            setInterval(function() { // Обновлять таблицу валют каждые 15 секунд
                 self.loadRows();
             }, 15000);
-            EventBus.$on('tableupdate', () => {
+            EventBus.$on('tableupdate', () => { // Обновление таблицы валют при нажатии кнопки
                 this.loadRows();
             });
         }

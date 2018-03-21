@@ -13,7 +13,7 @@
             }
         },
         methods: {
-            updateTable: function() {
+            updateTable: function() { // Нажатие кнопки - обновить таблицу валют
                 EventBus.$emit('tableupdate', []);
             },
         },

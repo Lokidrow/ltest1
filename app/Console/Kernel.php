@@ -8,7 +8,7 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 class Kernel extends ConsoleKernel
 {
     /**
-     * The Artisan commands provided by your application.
+     * Консольный команды предоставляемые вашим приложением
      *
      * @var array
      */
@@ -17,14 +17,14 @@ class Kernel extends ConsoleKernel
     ];
 
     /**
-     * Define the application's command schedule.
+     * Запланированные задачи вашего приложения
      *
      * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
      * @return void
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('currencies:update')->everyThirtyMinutes();
+        $schedule->command('currencies:update')->everyThirtyMinutes(); // Обновление валют каждые 15 минут
     }
 
     /**

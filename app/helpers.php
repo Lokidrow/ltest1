@@ -1,5 +1,6 @@
 <?php
 /**
+ * curl get запрос
  * @param string $url
  * @return string
  * @throws Exception
@@ -24,6 +25,10 @@ function curlGet($url)
     }
 }
 
+/**
+ * Вывод отладочных данных
+ * @param mixed $s
+ */
 function pr($s)
 {
     echo '<pre>';
