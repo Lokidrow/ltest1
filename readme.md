@@ -42,6 +42,8 @@ $ npm run production
 $ crontab -e
 ```
 
+```
 * * * * * php {ПУТЬ К ПРОЕКТУ}/artisan schedule:run >> /dev/null 2>&1
+```
 
 {ПУТЬ К ПРОЕКТУ} замените на реальный путь к проекту
